@@ -37,7 +37,8 @@ void WorldRareVisionHack::startHack() {
                 BYTE green = pPixels[index + 1];  // Grün
                 BYTE red = pPixels[index + 2];    // Rot
 
-                if (checkIfInRange((int)red, (int)green, (int)blue, 119, 88, 130, 20)) {
+                if (checkIfInRange((int)red, (int)green, (int)blue, 95, 65, 103, 15)) {
+                //if (checkForRare((int)red, (int)green, (int)blue)) {
                     //ostringstream s_t;
 
                     //s_t << "X: " << x << " Y: " << y;
@@ -58,6 +59,17 @@ void WorldRareVisionHack::startHack() {
 bool WorldRareVisionHack::checkIfInRange(int r, int g, int b, int r_t, int g_t, int b_t, int range) {
     if (abs(r - r_t) <= range && abs(g - g_t) <= range && abs(b - b_t) <= range) {
         return true;
+    }
+    return false;
+}
+
+bool WorldRareVisionHack::checkForRare(int r, int g, int b) {
+    if (r >= 91 && r <= 107) {
+        if (g >= 70 && g <= 86) {
+            if (b >= 100 && b <= 112) {
+                return true;
+            }
+        }
     }
     return false;
 }

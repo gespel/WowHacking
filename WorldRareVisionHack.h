@@ -12,6 +12,7 @@ public:
 	
 private:
 	bool checkIfInRange(int r, int g, int b, int r_t, int g_t, int b_t, int range);
+	bool checkForRare(int r, int g, int b);
 
 	HDC hdcScreen = GetDC(NULL);
 	HDC hdcMem = CreateCompatibleDC(hdcScreen);

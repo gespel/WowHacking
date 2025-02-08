@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MemoryHacks.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="WorldRareVisionHack.cpp" />
     <ClCompile Include="WowHacking.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MemoryHacks.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="WorldRareVisionHack.h" />
