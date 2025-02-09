@@ -1,5 +1,3 @@
-// WowHacking.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
 #include <windows.h> 
 #include <iostream>
 #include <sstream>
