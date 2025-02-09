@@ -13,6 +13,7 @@ int main() {
     //WorldRareVisionHack wrvh;
     //wrvh.startHack();
     MemoryHacks mh;
+    cout << mh.getGold();
 
     return 0;
 }

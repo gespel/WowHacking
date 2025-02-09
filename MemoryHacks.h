@@ -8,8 +8,10 @@ class MemoryHacks
 {
 public:
 	MemoryHacks();
+	int getGold();
 private:
 	DWORD pid;
 	HANDLE pHandle;
+	HWND hwnd;
 };
 

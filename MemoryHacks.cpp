@@ -1,18 +1,13 @@
 #include "MemoryHacks.h"
 
 MemoryHacks::MemoryHacks() {
-    int cHealth;
-    HWND hWnd = FindWindowA(0, ("World of Warcraft"));
+    hwnd = FindWindowA(0, ("World of Warcraft"));
+    GetWindowThreadProcessId(hwnd, &pid);
+    pHandle = OpenProcess(PROCESS_VM_READ, FALSE, pid);    
+}
 
-    GetWindowThreadProcessId(hWnd, &pid);
-    pHandle = OpenProcess(PROCESS_VM_READ, FALSE, pid);
-
-    while (true)
-    {
-        ReadProcessMemory(pHandle, (LPVOID)(0x1F22BDA4D18), &cHealth, sizeof(cHealth), 0);
-        std::cout << cHealth << std::endl;
-        Sleep(200);
-    }
-        
-    
+int MemoryHacks::getGold() {
+    int gold;
+    ReadProcessMemory(pHandle, (LPVOID)(0x1F22BDA4D18), &gold, sizeof(gold), 0);
+    return gold;
 }
